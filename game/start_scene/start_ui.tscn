@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl8q8f32imusk"]
+
+[ext_resource type="Script" path="res://game/start_scene/start_ui.gd" id="1_n87es"]
+
+[node name="StartUI" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_n87es")
+
+[node name="MainMenu" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="LoadExistingModel" type="Button" parent="MainMenu"]
+layout_mode = 2
+text = "Load Model"
+
+[node name="ModelFileDialog" type="FileDialog" parent="."]
+mode = 2
+title = "Open a File"
+size = Vector2i(600, 350)
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+file_mode = 0
+root_subfolder = "res://assets/test_meshes/Teapot"
+filters = PackedStringArray("*.gltf")
+
+[connection signal="pressed" from="MainMenu/LoadExistingModel" to="." method="_on_load_existing_model_pressed"]
+[connection signal="file_selected" from="ModelFileDialog" to="." method="_on_model_file_dialog_file_selected"]

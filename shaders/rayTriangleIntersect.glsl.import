@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://dafgtcr471k4p"
+path="res://.godot/imported/rayTriangleIntersect.glsl-08e653d80560a0efd62940c54261be87.res"
+
+[deps]
+
+source_file="res://shaders/rayTriangleIntersect.glsl"
+dest_files=["res://.godot/imported/rayTriangleIntersect.glsl-08e653d80560a0efd62940c54261be87.res"]
+
+[params]
+

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccmn1720tejv6"]
+
+[sub_resource type="GDScript" id="GDScript_uyd5v"]
+script/source = "extends CenterContainer
+
+@onready var label = get_child(0)
+
+func debug_print(input):
+	label.set_text(label.get_text() + \"\\n\" + input)
+"
+
+[node name="Console Output" type="CenterContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_uyd5v")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
